@@ -1,13 +1,14 @@
-
-
 import './Main.css'
+import Header from '../../components/Header/Header.jsx';
 
 function Main() {
 
 
   return (
     <>
-      <h1>Olá</h1>
+      <section className="main">
+        <Header />
+      </section>
     </>
   )
 }
