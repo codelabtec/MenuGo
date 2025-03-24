@@ -79,4 +79,9 @@
     .header-buttons {
         display: none;
     }
+
+    .header-container {
+        height: 5rem;     
+    }
+    
 }
