@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header.jsx';
 import Hero from '../../components/Hero/Hero.jsx';
 import Benefits from '../../components/benefits/benefits.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
+import VideoTutorial from '../../components/Video/Video.jsx';
 
 function Main() {
 
@@ -17,6 +18,9 @@ function Main() {
       </section>
       <section className="benefits">
         <Benefits />
+      </section>
+      <section className="video">
+        <VideoTutorial />
       </section>
       <section className="footer">
         <Footer />
