@@ -12,7 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color-primary: ##E71D36;
+  --color-primary: #E71D36;
   --color-secondary: #FFA500;
   --title-h1-color: #011627;
   --button-text-color: #011627;
@@ -20,6 +20,7 @@
   --background-white-color: #FFFFFF;
   --text-light-color-1: #FFFFFF;
   --border-color: #E4E7EC;
+  --hero-background-color: #FDFFFC;
 }
 
 * {

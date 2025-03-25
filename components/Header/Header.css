@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    max-width: 1216px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -29,7 +29,6 @@
     padding: 0.625rem 1.25rem;
     justify-content: center;
     align-items: center;
-
     font-size: 0.875rem;
     font-weight: 600;
     line-height: 150%;
@@ -69,6 +68,22 @@
 
 .menu-mobile {
     display: none;
+}
+
+@media screen and (max-width: 1440px) {
+    
+    .header-content {
+        padding: 0 5.375rem;
+    }
+    
+}
+
+@media screen and (max-width: 1080px) {
+    
+    .header-content {
+        padding: 0 1.25rem;
+    }
+    
 }
 
 @media screen and (max-width: 500px) {
