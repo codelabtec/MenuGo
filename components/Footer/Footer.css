@@ -1,0 +1,116 @@
+.footer-container {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--text-light-color-1);
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content img {
+    place-self: center;
+    cursor: pointer;
+}
+
+.footer-social-media {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+.footer-links a {
+    color: var(--text-light-color-1);
+    padding-right: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    padding-left: 0;
+}
+
+.social-icons a {
+    padding-right: 0;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #D3182F;
+    padding: 2rem 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.footer-text a {
+    text-decoration: underline;
+    color: var(--text-light-color-1);
+}
+
+@media screen and (max-width: 1440px) {
+    .footer-content {
+        padding: 1.25rem 5.375rem;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    
+    .footer-content {
+        padding: 1.25rem 1.25rem;
+        gap: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 840px) {
+    
+    .footer-text {
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .footer-menu {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-menu a {
+        padding-right: 0px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: center;
+    }
+
+}

@@ -98,6 +98,7 @@
     padding: 0.625rem 1rem;
     width: 100%;
     max-width: 100%;
+    background-color: var(--hero-background-color);
 }
 
 .hero-cards .card img{
