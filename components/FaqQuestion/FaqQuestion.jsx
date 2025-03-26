@@ -7,12 +7,9 @@ const FaqQuestion = ({ faqs }) => {
    
     const [openIndex, setOpenIndex] = useState(0);
 
-
-
     const toggleFaq = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
-
 
     return (
         <div className="faq-content">
