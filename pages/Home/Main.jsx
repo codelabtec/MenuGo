@@ -4,6 +4,7 @@ import Hero from '../../components/Hero/Hero.jsx';
 import Benefits from '../../components/benefits/benefits.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import VideoTutorial from '../../components/Video/Video.jsx';
+import Faq from '../../components/Answer/Answer.jsx';
 
 function Main() {
 
@@ -21,6 +22,9 @@ function Main() {
       </section>
       <section className="video">
         <VideoTutorial />
+      </section>
+      <section className="faq">
+        <Faq />
       </section>
       <section className="footer">
         <Footer />

@@ -18,10 +18,10 @@ const Footer = () => {
                             <a href='#'>Cadastre-se</a>
                         </div>
                         <div className='social-icons'>
-                            <a href='#' target='_blank' rel='noopener noreferrer'>
+                            <a href='https://www.facebook.com/profile.php?id=61574607146832' target='_blank' rel='noopener noreferrer'>
                                 <img src={FacebookIcon} alt="Ícone do Facebook" />
                             </a>
-                            <a href='#'>
+                            <a href='https://www.instagram.com/menuugo.oficial/' target='_blank' rel='noopener noreferrer'>
                                 <img src={InstagramIcon} alt="Ícone do Instagram" />
                             </a>
                         </div>

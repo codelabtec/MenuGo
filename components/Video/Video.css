@@ -2,6 +2,7 @@
     width: 100%;
     padding: 6rem;
     display: flex;
+    background-color: var(--benefits-background-color);
 }
 
 .video-content {
@@ -19,6 +20,8 @@
     padding-bottom: 4rem;
     max-width: 985px;
 }
+
+
 
 .video-text span {
     color: var(--color-primary);
@@ -40,10 +43,25 @@
     padding-bottom: 1.25rem;
 }
 
+.video-text p {
+    color: var(--text-subtitle-color);
+    font-size: 1rem;
+    line-height: 150%;
+}
+
 @media screen and (max-width: 880px) {
     .video-container {
         padding: 6rem 1.25rem;
-        
     }
    
+}
+
+@media screen and (max-width: 500px) {
+    .video-text h2 {
+        font-size: 2rem;
+    }
+
+    .video-content {
+        padding: 0px;
+    }
 }

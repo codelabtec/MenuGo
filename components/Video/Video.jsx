@@ -8,7 +8,7 @@ const VideoTutorial = () => {
                 <div className='video-text'>
                     <span>Demonstração Completa</span>
                     <h2>Veja o MenuGo em ação!</h2>
-                    <p>Assista à demonstração detalhada, desde a criação do seu cardápio digital até o recebimento automático dos pedidos na cozinha, finalizando com a solicitação da conta pelo cliente.</p>
+                    <p>Em apenas 3 etapas rápidas, explicamos tudo que você precisa saber para criar e usar o seu cardápio digital de forma prática e intuitiva.</p>
                 </div>
                 
                 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
