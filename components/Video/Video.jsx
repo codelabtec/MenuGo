@@ -7,7 +7,7 @@ const VideoTutorial = () => {
             <div className='video-content'>
                 <div className='video-text'>
                     <span>Demonstração Completa</span>
-                    <h2>Veja o MenuGo em ação!</h2>
+                    <h2>Veja o MenuuGo em ação!</h2>
                     <p>Em apenas 3 etapas rápidas, explicamos tudo que você precisa saber para criar e usar o seu cardápio digital de forma prática e intuitiva.</p>
                 </div>
                 

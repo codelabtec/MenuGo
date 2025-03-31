@@ -5,6 +5,7 @@ import Benefits from '../../components/benefits/benefits.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import VideoTutorial from '../../components/Video/Video.jsx';
 import Faq from '../../components/Answer/Answer.jsx';
+import Banner from '../../components/Banner/Banner.jsx';
 
 function Main() {
 
@@ -19,6 +20,9 @@ function Main() {
       </section>
       <section className="benefits">
         <Benefits />
+      </section>
+      <section className="banner">
+        <Banner />
       </section>
       <section className="video">
         <VideoTutorial />
