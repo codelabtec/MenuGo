@@ -3,6 +3,7 @@ import IphoneMockup from '../../src/assets/mockup-iphone.webp';
 import CardapioIcon from '../../src/assets/cardapio-icon.svg';
 import QrCodeIcon from '../../src/assets/qrcode-icon.svg';
 import WebMockup from '../../src/assets/web.webp';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
 
@@ -13,7 +14,9 @@ const Hero = () => {
                     <span>Crie seu cardápio grátis</span>
                     <h1>Crie seu Cardápio Online em Minutos e Aumente suas Vendas!</h1>
                     <p>Crie, personalize e publique cardápios digitais incríveis com facilidade e rapidez. Atraia mais clientes, otimize suas vendas e ofereça uma experiência moderna com o nosso criador de cardápios online.</p>
-                    <a href='#'>Criar seu cardápio</a>
+                    <Link to='/login'>
+                        Criar seu cardápio
+                    </Link>
 
                     <div className='hero-cards'>
                         <div className='card'>

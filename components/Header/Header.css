@@ -24,18 +24,32 @@
     gap: 0.75rem;
 }
 
-.header-buttons a {
+.header-buttons Link  {
+    
     display: inline-flex;
-    padding: 0.625rem 1.25rem;
+    padding: 0px 0px;
     justify-content: center;
     align-items: center;
     font-size: 0.875rem;
     font-weight: 600;
     line-height: 150%;
-    border-radius: 8px;
+    border-radius: 10px;
     background: #E71D36;
     color: var(--text-light-color-1);
-    
+
+}
+
+#cadastro  {
+    display: inline-flex;
+    padding: 0px 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 150%;
+    border-radius: 10px;
+    background: #E71D36;
+    color: var(--text-light-color-1);
 }
 
 #login {
@@ -47,8 +61,8 @@
     font-size: 0.875rem;
     font-weight: 600;
     line-height: 150%;
-    border-radius: 0.625rem;
-    background: var(--background-white-color);
+    border-radius: 10px;
+    background: var(--background-white-color) !important;
     color: var(--title-h1-color);
 }
 

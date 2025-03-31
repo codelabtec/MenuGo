@@ -2,6 +2,7 @@ import './Footer.css';
 import LogoLight from '../../src/assets/menuugo-logo-light.svg';
 import FacebookIcon from '../../src/assets/facebook-social-media-icon.svg';
 import InstagramIcon from '../../src/assets/instagram-social-media-icon.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -14,8 +15,8 @@ const Footer = () => {
                     <div className='footer-links'>
                         <div className='footer-menu'>
                             <a href='#'>Contato</a>
-                            <a href='#'>Entrar</a>
-                            <a href='#'>Cadastre-se</a>
+                            <Link to='/login'>Entrar</Link>
+                            <Link to='/cadastre-se'>Cadastre-se</Link>
                         </div>
                         <div className='social-icons'>
                             <a href='https://www.facebook.com/profile.php?id=61574607146832' target='_blank' rel='noopener noreferrer'>
