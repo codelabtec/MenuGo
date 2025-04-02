@@ -13,10 +13,11 @@
 }
 
 .sign-up-content {
+    margin: 2rem 0rem;
     max-width: 425px;
     width: 100%;
     min-height: 746px;
-    margin: auto;
+    
     display: flex;
     align-items: center;
     flex-direction: column;

@@ -3,19 +3,31 @@ import Background from '../../src/assets/points-background-2.svg';
 import MenuuGoLogo from '../../src/assets/logo.svg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useSnackbar } from 'notistack';
+import { CircularProgress } from '@mui/material';
 
 const SignUp = () => {
 
+    const [loading, setLoading] = useState(false);
+    const { enqueueSnackbar } = useSnackbar();
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [numero, setNumero] = useState("");
     // const [confirmPassword, setConfirmPassword] = useState("");
-    const [message, setMessage] = useState("");
+    // const [message, setMessage] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setMessage("");
+        // setMessage("");
+        setLoading(true);
+
+        const userData = {
+            nome,
+            email,
+            numero,
+            senha,
+        };
 
         try {
             const response = await fetch("http://localhost:3000/api/usuarios/cadastrar", {
@@ -23,13 +35,7 @@ const SignUp = () => {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({
-                    nome,
-                    email,
-                    numero,
-                    senha,
-                    // confirmPassword
-                })
+                body: JSON.stringify(userData)
             });
 
             const data = await response.json();
@@ -37,7 +43,8 @@ const SignUp = () => {
             
             if (response.ok) {
 
-                setMessage(data.message || "Usuário cadastrado com sucesso");
+                enqueueSnackbar( data.message || 'Login realizado com sucesso!', { variant: 'success' });
+                // setMessage(data.message || "Usuário cadastrado com sucesso");
 
                 //limpa os campos
                 setNome("");
@@ -47,14 +54,24 @@ const SignUp = () => {
                 // setConfirmSenha("");
                
             }else {
-                setMessage(data.message || "Erro ao cadastrar usuário");
+
+                if (data.code === 'EMAIL_EXISTS' || data.message.includes('email')) {
+                    enqueueSnackbar('Este email já está cadastrado', { variant: 'error' });
+                } else {
+                    enqueueSnackbar(data.message || 'Erro ao cadastrar usuário', { variant: 'error' });
+                }
+
             }
 
             
         }
         catch (error) {
-            console.error("Erro ao cadastrar usuário:", error);
-            setMessage("Erro ao cadastrar usuário");
+            // console.error("Erro ao cadastrar usuário:", error);
+            // setMessage("Erro ao cadastrar usuário");
+            enqueueSnackbar( error || "Erro ao cadastrar usuário", { variant: 'error' });
+        }
+        finally {
+            setLoading(false);
         }
     };
 
@@ -73,15 +90,15 @@ const SignUp = () => {
                     </div>
                     <div className="input-group">
                         <label htmlFor="email">E-mail<span>*</span></label>
-                        <input  id='email' type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu e-mail" required/>
+                        <input autoComplete="off" autoCorrect="off" autoCapitalize="off" id='email' type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu e-mail" required/>
                     </div>
                     <div className="input-group">
                         <label htmlFor="numero">Telefone<span>*</span></label>
-                        <input  id='numero' type="tel" value={numero} onChange={(e) => setNumero(e.target.value)} placeholder="(00) 00000-0000" required/>
+                        <input autoComplete="off" autoCorrect="off" autoCapitalize="off" id='numero' type="tel" value={numero} onChange={(e) => setNumero(e.target.value)} placeholder="(00) 00000-0000" required/>
                     </div>
                     <div className="input-group">
                         <label htmlFor="password">Senha<span>*</span></label>
-                        <input  id='password' type="password" value={senha} onChange={(e) => setSenha(e.target.value)} placeholder="Sua senha" required/>
+                        <input autoComplete="off" autoCorrect="off" autoCapitalize="off" id='password' type="password" value={senha} onChange={(e) => setSenha(e.target.value)} placeholder="Sua senha" required/>
                     </div>
                     {/* <div className="input-group">
                         <label htmlFor="password">Confirmar Senha<span>*</span></label>
@@ -96,13 +113,24 @@ const SignUp = () => {
                             Esqueci minha senha
                         </Link>
                     </div>
-                    <button type="submit">Cadastrar</button>
+                    <button  disabled={loading} type="submit" className="submit-button">
+
+                    {loading ? (
+                        <>
+                        <CircularProgress size={20} style={{color: 'white', marginRight: '8px'}} />
+                        Cadastrando
+                        </>
+                    ) : (
+                        'Cadastrar'
+                    )}
+
+                    </button>
                     <div className='login-link'>
                         <p>Já tem uma conta?</p>
                         <Link className='login' to='/login'>Entrar</Link>
                     </div>
                 </form>
-                {message && <p className="message">{message}</p>}
+                {/* {message && <p className="message">{message}</p>} */}
             </div>
         </div>
     )
