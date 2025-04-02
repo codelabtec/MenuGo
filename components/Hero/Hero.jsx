@@ -14,7 +14,8 @@ const Hero = () => {
                     <span>Crie seu cardápio grátis</span>
                     <h1>Crie seu Cardápio Online em Minutos e Aumente suas Vendas!</h1>
                     <p>Crie, personalize e publique cardápios digitais incríveis com facilidade e rapidez. Atraia mais clientes, otimize suas vendas e ofereça uma experiência moderna com o nosso criador de cardápios online.</p>
-                    <Link to='/login'>
+                    
+                    <Link className='link' to='/login'>
                         Criar seu cardápio
                     </Link>
 

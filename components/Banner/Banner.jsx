@@ -47,7 +47,7 @@ const Banner = () => {
                         <img src={Photo2} alt="Imagem do mockup com MenuuGo" />
                     </div>
                     <div className="text-image-2">
-                        <div className='banner-text-image'>
+                        <div className='banner-text-image-2'>
                             <div className='icons'>
                                 <img src={Icon2} alt="ícone da mesa dos restaurantes" />
                                 <h2>Disponibilize os QR Codes nas Mesas</h2>

@@ -63,7 +63,7 @@
     padding-bottom: 2rem;
 }
 
-.hero-text a {
+.hero-text .link {
     display: inline-flex;
     padding: 0.625rem 64px;
     justify-content: center;
